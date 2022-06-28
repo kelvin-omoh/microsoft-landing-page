@@ -1,0 +1,338 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+html{
+    scroll-behavior: smooth;
+    transition: 2s ease-in;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: #000;
+    font-size: 1rem;
+    line-height:1.5;
+    overflow-x: hidden;
+    
+}
+
+a{
+    color: #2b2a2a;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+ /* container  */
+
+ .container{
+     width: 90%;
+     max-width: 1100px;
+     margin: auto;
+ }
+
+  /* nav  */
+
+  .main-nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  padding: 1.4rem 0;
+  font-size: 0.8rem;
+  } 
+
+  .main-nav .logo{
+      width: 6rem;
+  }
+
+  .main-nav ul{
+      display: flex;
+      /* padding-left: 40rem; */
+  }
+
+  .main-nav ul li{
+      padding: 0 10px;
+  }
+
+  .main-nav ul li a{
+      padding-bottom: 0.2rem;
+  }
+
+  .main-nav ul li a:hover{
+      border-bottom: 2px solid #262626;
+  }
+
+  .main-nav ul.main-menu{
+     flex: 1;  /*  moves object closer or backward */
+     margin-left:1.8rem ;
+  }
+
+  .menu-btn{
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: red;
+      z-index: 2;
+      display: none;
+  }
+
+  .btn{
+      cursor: pointer;
+      display: inline-block;
+      border: 0;
+      color:#fff;
+      font-weight: bold ;
+      padding: 10px 20px;
+      background: rgb(21, 21, 21);
+      font-size: 1rem;
+  }
+
+  .btn:hover{
+      opacity: .9;
+  }
+/* 
+  .dark{
+      color: #fff;
+  } */
+
+  /* show case  */
+  .showcase{
+ width:100%;
+ height: 20rem;
+ background: url('./Highlight-Hero-Windows11-GlobalLaunch_VP5-1920x600.jpeg') no-repeat center center;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+ justify-content: flex-end;
+ padding-bottom:3rem ;
+ }
+
+ .showcase h2, .showcase p{
+     margin-bottom: .8rem;
+ }
+
+ .showcase .btn{
+     background-color: rgb(36, 35, 35);
+     margin-top: 1.4rem;
+ }
+
+ /* home card  */
+ .home-cards{
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 1.6rem;
+     margin-bottom: -.5rem;
+     padding: 2rem;
+ }
+
+ .home-cards img{
+     width: 100%;
+     margin-top: 6rem;
+ }
+
+ .home-cards h3{
+     margin-bottom: .3rem;
+ }
+
+ .home-cards a{
+     display: inline-block;
+     padding-top: .9rem;
+     color: rebeccapurple;
+     text-transform: uppercase;
+     font-weight: bold;
+ }
+
+ .home-cards a:hover i{
+    margin-left: .8rem;
+ }
+
+/* .home-cards animation */
+.fadeinleft{
+    animation: left 1.2s both;
+}
+@keyframes left{
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fadeintop{
+    animation: top 1.2s both;
+}
+@keyframes top{
+    0%{
+        opacity: 0;
+        transform: translateY(50px)
+    }
+    100%{
+        opacity: 1;
+        transform: translatey(0px);
+    }
+}
+.fadeinright{
+    animation: right 1.2s both;
+}
+@keyframes right{
+    0%{
+        opacity: 0;
+      transform: translateX(50px);
+
+    }
+    100%{
+        opacity: 1;
+        transform: translatex(0px);
+    }
+}
+
+ .main-footer{
+    background-color: #c9c9c99e;
+ }
+
+footer{
+    margin-top:6rem;
+    display: grid;
+    grid-gap: 3rem;
+    font-size: 1rem;
+    padding: 2rem;
+    grid-template-columns: repeat(6,1fr);
+}
+
+footer h2{
+    color: #696969;
+    font-size: .9rem;
+}
+
+footer ul li,footer  a{
+    font-size: .7rem;
+}
+
+ .end-f{
+   display: flex;
+   justify-content: space-between;
+   padding: 0 1rem;
+   font-size: .8rem;
+ 
+}
+.end-f .others{
+    display: flex;
+    flex-direction: row;
+    margin-left: 29rem;
+    font-size: .6rem;
+}
+ .end-f li a{
+    color: rgb(125, 125, 125);
+    display: flex;
+    margin-right:3rem ;
+ 
+  
+}
+ /* x-box */
+ 
+ .xbox{
+     width: 100%;
+     height: 18rem;
+      background:url('x-box') ;/*xbox */
+      margin-bottom: 20px;
+ }
+ .move-up{
+     border: 2px solid;
+     padding: .6rem;
+     margin: 0 2rem 0 0 ;
+ }
+  .hambugger .fa-bars-staggered,.open{
+ display: none;
+ }
+ .hambugger .fa-xmark , .close{
+display: none;
+ }
+ @media (max-width:760px){
+    .home-cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.6rem;
+        margin-bottom: -19rem;
+        padding: 2rem;
+
+    }
+   
+   
+  .hambugger .fa-bars-staggered {
+    display: block;
+    cursor: pointer;
+    }
+    .open{
+        display: flex;
+        flex-direction: row;
+        background-color: red;
+    }
+    .hambugger .fa-xmark , .close{
+   display: none;
+    }
+    .main-nav ul{
+        display: none;
+        font-size: .5rem;
+        line-height: 1.3rem;
+        grid-template-columns: repeat(3,1fr);
+        /* padding-left: 40rem; */
+    }
+    .home-cards{
+        font-size:.5rem;
+        justify-content: center;
+    }
+
+footer{
+    margin-top:20rem;
+    display: grid;
+    grid-gap: 2rem;
+    font-size: .5rem;
+    padding: 2rem;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.end-f{
+    width: 100vw;
+      display: grid;
+    grid-template-columns: repeat(3,3fr);
+}
+
+
+.end-f li a{
+    color: rgb(127, 126, 126);
+    margin-left: 1rem;
+    font-size: .8rem;
+    margin-right: 1rem;
+}
+
+.x-box{
+    height: 30%;
+}
+
+.end-f .others{
+    display: grid;
+    grid-template-columns: repeat(1,3fr);
+    margin-left: 0rem;
+}
+
+.end-f .others li a{
+    font-size: .5rem;
+}
+
+.move-up{
+    width: 2.3rem;
+    height: 2rem;
+}
+
+     
+ }
